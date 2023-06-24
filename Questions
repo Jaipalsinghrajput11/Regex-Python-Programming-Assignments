@@ -1,0 +1,74 @@
+1.Write a program using for loop in which it will print the given input is palindrome or not?
+
+sol-
+def is_palindrome(input_str):
+    input_str = input_str.replace(" ", "").lower()
+    length = len(input_str)
+    for i in range(length // 2):
+        if input_str[i] != input_str[length - i - 1]:
+            return False
+    return True
+input_str = input("Enter a string: ")
+if is_palindrome(input_str):
+    print(f"{input_str} is a palindrome.")
+else:
+    print(f"{input_str} is not a palindrome.")
+
+
+2.Write a program in which take a input and count how many vowel are there inside the input?
+
+sol-
+def count_vowels(input_str):
+    vowels = "aeiouAEIOU"
+    count = 0
+    for char in input_str:
+        if char in vowels:
+            count += 1
+    return count
+input_str = input("Enter a string: ")
+print(f"The number of vowels in the input is: {count_vowels(input_str)}")
+
+3.Write a program in which take a input from a user wherever we find vowel replace with a=0, e=2, i=0, o=0, u=1
+
+sol-
+def replace_vowels_with_numbers(input_str):
+    vowels = {'a': '0', 'e': '2', 'i': '3', 'o': '4', 'u': '1'}
+    replaced_str = ""
+    for char in input_str:
+        if char.lower() in vowels:
+            replaced_str += vowels[char.lower()]
+        else:
+            replaced_str += char
+    return replaced_str
+input_str = input("Enter a string: ")
+replaced_string = replace_vowels_with_numbers(input_str)
+print(f"The replaced string is: {replaced_string}")
+
+4.Write a program which take a input from a user wherever we find vowel replace it with #
+
+sol-
+def replace_vowels(input_str):
+    vowels = "aeiouAEIOU"
+    replaced_str = ""
+    for char in input_str:
+        if char in vowels:
+            replaced_str += "#"
+        else:
+            replaced_str += char
+    return replaced_str
+input_str = input("Enter a string: ")
+print(f"The replaced string is: {replace_vowels(input_str)}")
+
+5.Write a program in which take a input from a user if the input datatype is string , then get all the unique word from that string?
+
+sol-
+def get_unique_words(input_str):
+    if not isinstance(input_str, str):
+        return []
+    words = input_str.split()
+    unique_words = list(set(words))
+    return unique_words
+user_input = input("Enter a string: ")
+unique_words_list = get_unique_words(user_input)
+print(f"Unique words in the input: {unique_words_list}")
+
