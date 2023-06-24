@@ -26,7 +26,8 @@ def count_vowels(input_str):
             count += 1
     return count
 input_str = input("Enter a string: ")
-print(f"The number of vowels in the input is: {count_vowels(input_str)}")
+vowel_count = count_vowels(input_str)
+print(f"The number of vowels in the input is: {vowel_count}")
 
 3.Write a program in which take a input from a user wherever we find vowel replace with a=0, e=2, i=0, o=0, u=1
 
