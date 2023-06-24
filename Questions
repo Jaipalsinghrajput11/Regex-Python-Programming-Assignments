@@ -57,7 +57,8 @@ def replace_vowels(input_str):
             replaced_str += char
     return replaced_str
 input_str = input("Enter a string: ")
-print(f"The replaced string is: {replace_vowels(input_str)}")
+replaced_string = replace_vowels(input_str)
+print(f"The replaced string is: {replaced_string}")
 
 5.Write a program in which take a input from a user if the input datatype is string , then get all the unique word from that string?
 
