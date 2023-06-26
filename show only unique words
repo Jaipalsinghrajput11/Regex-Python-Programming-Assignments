@@ -1,0 +1,7 @@
+input_str = input("Enter a string: ")
+words = input_str.split()
+unique_words = list(set(words))
+if not isinstance(input_str, str):
+    words = input_str.split()
+    unique_words = list(set(words))
+print(f"Unique words in the input: {unique_words}")
